@@ -1,0 +1,33 @@
+{
+  "name": "coa-file-storage",
+  "version": "0.0.0",
+  "description": "轻量的文件储存/缓存工具 for Node.js",
+  "keywords": [
+    "coajs",
+    "coa",
+    "file-storage",
+    "file",
+    "storage"
+  ],
+  "license": "MIT",
+  "author": "Aex",
+  "homepage": "https://github.com/coajs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coajs/coa-file-storage.git"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "rm -rf dist && tsc && cp package.json *.md dist && rm -rf dist/test",
+    "sync": "curl -X PUT 'https://npm.taobao.org/sync/coa-file-storage?sync_upstream=true'",
+    "publish-prerelease": "yarn build && yarn version --prerelease && cp package.json *.md dist && cd dist && rm -rf test && npm publish",
+    "test": "NODE_PATH=run node dist/test"
+  },
+  "dependencies": {
+    "coa-helper": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "typescript": "^4.2.4"
+  }
+}
