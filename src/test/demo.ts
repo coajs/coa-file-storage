@@ -15,5 +15,3 @@ fileStorage.get('key1') // { info: 'this is value' }
 
 // 超过60秒后，数据过期，返回undefined
 fileStorage.get('key1') // undefined
-
-
